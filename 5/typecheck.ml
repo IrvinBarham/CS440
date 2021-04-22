@@ -9,7 +9,7 @@ let type_of_const (c: const) : typ =
 	|String str -> TString
 	|Bool b -> TBool
 	|Unit -> TUnit
-	|Nil -> TList TUnit
+	|Nil ->  TList (new_type())
 
 let type_of_op (o: infixop) : typ * typ * typ =
   match o with
